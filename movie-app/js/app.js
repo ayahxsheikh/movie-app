@@ -4,7 +4,7 @@ var itemWrapper = document.body.querySelector('main');
 
 function getMovieData(event){
     var keyCode = event.keyCode;
-    var searchText = searchInput.value.trim(); //target input value
+    var searchText = searchInput.value.trim().toLowerCase(); //target input value
     //trim() removes white space b4 & after string input
 
     //needs a if statement to enure to grab value when pressed. not for every key enetered in the input box
@@ -17,7 +17,7 @@ function getMovieData(event){
 
         for(var movie of movieData){
             // movie refers to every object and its info in the array
-            if(movie.title === searchText){
+            if(movie.title.toLocaleLowerCase() === searchText){
                 console.log('match')
             }
         }
