@@ -1,4 +1,16 @@
 
+//initialising function when page loads
+function init(){
+
+}
+
+init();
+
+// Get html elements
+// Get the input's value on enter key press
+// Grab data related to user's search
+// Inject the movie item into the DOM, based on user's search
+
 
 
 
