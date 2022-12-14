@@ -9,9 +9,9 @@ function displayMatches(matches){
   for(var match of matches){
     itemWrapper.insertAdjacentElement('beforeend', `
     <div class="movie-item">
-        <h3>Movie Title</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <a href="#">View Details</a>
+        <h3>${movieObj}</h3>
+        <p>${matchObj.description}</p>
+        <a href="#">${matchObj.imbd_url}</a>
     </div>`)
   }
 
