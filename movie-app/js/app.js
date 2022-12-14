@@ -4,14 +4,15 @@ var itemWrapper = document.body.querySelector('main');
 
 function getMovieData(event){
     var keyCode = event.keyCode;
-    var searchText = searchInput.value; //target input value
+    var searchText = searchInput.value.trm(); //target input value
+    //trim() removes white space b4 & after string input
 
     //needs a if statement to enure to grab value when pressed. not for every key enetered in the input box
     //also need to ensure they enter something
     //value for enter key is 13
 
     if(keyCode === 13 && searchText){
-        //cond means: if the keycode is 13 and search is true 
+        //cond means: if the keycode is 13 and search is true run code
 
     }
 }
