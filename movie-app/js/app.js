@@ -9,15 +9,13 @@ function displayMatches(matches){
   for(var match of matches){
     itemWrapper.insertAdjacentElement('beforeend', `
     <div class="movie-item">
-        <h3>${movieObj}</h3>
+        <h3>${matchObj.title}</h3>
         <p>${matchObj.description}</p>
-        <a href="#">${matchObj.imbd_url}</a>
+        <a href="#">${matchObj.imbd_url}"target="_blank">View More Details</a>
     </div>`)
   }
 
 }
-
-
 
 function getMovieData(event){
     var keyCode = event.keyCode;
