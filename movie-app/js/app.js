@@ -12,16 +12,18 @@ function getMovieData(event){
     //value for enter key is 13
 
     if(keyCode === 13 && searchText){
-        //condt=if the keycode is 13 and search is true run code
-        // console.log(searchText);
+        //if keycode is 13 and search is true run code
+
+        var matches = [];
 
         for(var movie of movieData){
             // movie refers to every object and its info in the array
             if(movie.title.toLocaleLowerCase().includes(searchText)){
-                //.lowercase allows removes case sensitivity .includes allows partial search "die" instead of die hard
-                console.log('match')
+            //.lowercase allows removes case sensitivity .includes() allows partial search "die" instead of die hard
+            matches.push(movie);
             }
         }
+        console.log(matches);
 
 
     }
