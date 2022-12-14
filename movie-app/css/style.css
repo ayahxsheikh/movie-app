@@ -108,10 +108,6 @@ main .movie-item{
     border: 3px solid var(--primary);
     border-radius: 5px;
     padding: 15px 10px;
-    background-image: 
-        /* you can pass in third argument into LN - to top */
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(https://api.lorem.space/image/movie?w=150&h=220);
     background-position: center;
     /* bg-sz tries to adjust ratio according to window size */
     background-size: cover;

@@ -7,12 +7,15 @@ function displayMatches(matches){
     //removes p tag on the page when search is used
 
   for(var matchObj of matches){
-    itemWrapper.insertAdjacentElement('beforeend', `
-    <div class="movie-item">
+    itemWrapper.insertAdjacentHTML('beforeend', `
+    <div class="movie-item" style="background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(${matchObj.image_url})">
         <h3>${matchObj.title}</h3>
         <p>${matchObj.description}</p>
-        <a href="#">${matchObj.imbd_url}"target="_blank">View More Details</a>
-    </div>`)
+        <a href="${matchObj.imbd_url}"target="_blank">View More Details</a>
+    </div>`
+    );
   }
 
 }
