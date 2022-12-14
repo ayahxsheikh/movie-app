@@ -82,14 +82,16 @@ h1.main-header {
     border: 1px solid;
     outline: none;
     /* outline removes the ugly blue border when clicked */
+    color: #4d4a4a ;
 }
 
 .search::placeholder {
-    color: #4d4a4a;
+    color: var(--primary);
     text-align: center;
 }
 
 main{
+    /* grid applied to main so children els can use cols */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
@@ -97,6 +99,7 @@ main{
 }
 
 main p.not-searched {
+    /* span grid-col according to grid lines not no of cols */
     grid-column: 1 / 5;
     color: #888888;
 }
