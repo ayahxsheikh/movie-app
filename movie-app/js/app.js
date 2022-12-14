@@ -3,7 +3,7 @@ var searchInput = document.body.querySelector('.search');
 var itemWrapper = document.body.querySelector('main');
 
 function displayMatches(matches){
-    
+  for(var match of matches)
 }
 
 
