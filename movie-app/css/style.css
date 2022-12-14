@@ -1,0 +1,121 @@
+/* VARIABLES */
+:root {
+    --primary: #b02222; 
+}
+
+/* RESETS */
+
+/* overrides default browser styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box; 
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* GLOBAL CLASSES */
+/* reusable classes 
+ - display flex  only works on direct child of parent element
+ */
+
+.row, .column {
+    display: flex;
+}
+
+/* targetting the column bc flex is default row */
+.column {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-between{
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+
+
+/**** CUSTOM STYLES ****/
+
+/* Header styles */
+header {
+    padding: 9px 5%;
+    background: var(--primary);
+}
+
+header h2, header nav i {
+    color: #fff;
+}
+
+header nav i {
+    font-size: 1.2rem;
+    padding: 0 2px;
+}
+
+/* Content Styles */
+
+/* no space inbetween the selector means target any with the class m-header */
+h1.main-header {
+    text-align:center;
+    margin: 15px 0;
+    color: var(--primary);
+}
+
+.search {
+    width: 350px;
+    margin-bottom: 30px;
+    padding: 7px 15px;
+    border-radius: 7px;
+    border: 1px solid;
+    outline: none;
+    /* outline removes the ugly blue border when clicked */
+}
+
+.search::placeholder {
+    color: #888888;
+    text-align: center;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 0 5%;
+}
+
+main .movie-item{
+    border: 1px solid;
+    padding: 10px;
+
+}
+
+main .movie-item > *:not(:last-child){
+    /* > * means target any child in the */
+    margin-bottom: 8px;
+}
+
+main .movie-item h3 {
+    color: var(--primary);
+}
+
+main .movie-item p{
+    color: #777;
+}
+
+main .movie-item a{
+    color: #306f93;
+    border-bottom: 1px dashed;
+}
