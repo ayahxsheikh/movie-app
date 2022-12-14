@@ -3,6 +3,9 @@ var searchInput = document.body.querySelector('.search');
 var itemWrapper = document.body.querySelector('main');
 
 function displayMatches(matches){
+    itemWrapper.innerHTML = '';
+    //removes p tag on the page when search is used
+
   for(var match of matches)
 }
 
