@@ -2,6 +2,12 @@
 var searchInput = document.body.querySelector('.search');
 var itemWrapper = document.body.querySelector('main');
 
+function displayMatches(matches){
+    
+}
+
+
+
 function getMovieData(event){
     var keyCode = event.keyCode;
     var searchText = searchInput.value.trim().toLowerCase(); //target input value
@@ -23,7 +29,7 @@ function getMovieData(event){
             matches.push(movie);
             }
         }
-        console.log(matches);
+        displayMatches(matches);
 
 
     }
