@@ -1,14 +1,6 @@
 
 var searchInput = document.body.querySelector('.search');
 var itemWrapper = document.body.querySelector('main');
-var movieData = [
-    {
-        title: 'Jurassic Park',
-        description: 'lorem huve oat milk coffee yessir',
-        image_url: 'https://api.lorem.space/image/movie?w=150&h=220',
-        imbd_url: 'https://www.imdb.com/title/tt1745960/?ref_=ls_mv_desc'
-    }
-];
 
 
 //initialising function when page loads
