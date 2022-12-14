@@ -97,8 +97,9 @@ main{
 }
 
 main .movie-item{
-    border: 1px solid;
-    padding: 10px;
+    border: 3px solid var(--primary);
+    border-radius: 5px;
+    padding: 15px 10px;
     background-image: 
         /* you can pass in third argument into LN - to top */
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -115,15 +116,17 @@ main .movie-item > *:not(:last-child){
     margin-bottom: 8px;
 }
 
-main .movie-item h3 {
-    color: var(--primary);
+main .movie-item h3, main .movie-item p{
+    color: #fcfcfc;
 }
 
 main .movie-item p{
-    color: #777;
+    font-size: .85rem;
+    line-height: 1.3;
 }
 
 main .movie-item a{
-    color: #306f93;
-    border-bottom: 1px dashed;
+    color: #d07a1f;
+    border-bottom: 1px dashed #d07a1f;
+    font-size: .8rem;
 }
