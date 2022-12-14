@@ -6,7 +6,15 @@ function displayMatches(matches){
     itemWrapper.innerHTML = '';
     //removes p tag on the page when search is used
 
-  for(var match of matches)
+  for(var match of matches){
+    itemWrapper.insertAdjacentElement('beforeend', `
+    <div class="movie-item">
+        <h3>Movie Title</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="#">View Details</a>
+    </div>`)
+  }
+
 }
 
 
