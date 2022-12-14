@@ -2,10 +2,14 @@
 var searchInput = document.body.querySelector('.search');
 var itemWrapper = document.body.querySelector('main');
 
+function getMovieData(){
+    
+}
 
-//initialising function when page loads
+
+//initialising function starts when page loads
 function init(){
-
+searchInput.addEventListener('keydown', getMovieData )
 }
 
 init();
