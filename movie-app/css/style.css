@@ -99,6 +99,9 @@ main{
 main .movie-item{
     border: 1px solid;
     padding: 10px;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(https://api.lorem.space/image/movie?w=150&h=220);
 
 }
 
