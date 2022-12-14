@@ -6,7 +6,7 @@ function displayMatches(matches){
     itemWrapper.innerHTML = '';
     //removes p tag on the page when search is used
 
-  for(var match of matches){
+  for(var matchObj of matches){
     itemWrapper.insertAdjacentElement('beforeend', `
     <div class="movie-item">
         <h3>${matchObj.title}</h3>
