@@ -117,7 +117,7 @@ main .movie-item{
 
 main .movie-item > *:not(:last-child){
     /* > * means target any child in the */
-    margin-bottom: 8px;
+    margin-bottom: 30px;
 }
 
 main .movie-item h3, main .movie-item p{

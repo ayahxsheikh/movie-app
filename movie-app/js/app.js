@@ -13,8 +13,9 @@ function displayMatches(matches){
     url(${matchObj.image_url})">
         <h3>${matchObj.title}</h3>
         <p>${matchObj.description}</p>
-        <a href="${matchObj.imbd_url}"target="_blank">View More Details</a>
+        <a href="${matchObj.imdb_url}"target= "_blank">View More Details</a>
     </div>`
+    //target blank loads url in a new tab instead of changing the current page
     );
   }
 
@@ -24,10 +25,6 @@ function getMovieData(event){
     var keyCode = event.keyCode;
     var searchText = searchInput.value.trim().toLowerCase(); //target input value
     //trim() removes white space b4 & after string input
-
-    //needs a if statement to enure to grab value when pressed. not for every key enetered in the input box
-    //also need to ensure they enter something
-    //value for enter key is 13
 
     if(keyCode === 13 && searchText){
         //if keycode is 13 and search is true run code
@@ -62,18 +59,6 @@ init();
 // Get the input's value on enter key press
 // Grab data related to user's search
 // Inject the movie item into the DOM, based on user's search
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
