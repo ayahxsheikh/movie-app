@@ -4,7 +4,7 @@ var itemWrapper = document.body.querySelector('main');
 
 function getMovieData(event){
     var keyCode = event.keyCode;
-    var searchText = searchInput.value.trm(); //target input value
+    var searchText = searchInput.value.trim(); //target input value
     //trim() removes white space b4 & after string input
 
     //needs a if statement to enure to grab value when pressed. not for every key enetered in the input box
@@ -12,20 +12,28 @@ function getMovieData(event){
     //value for enter key is 13
 
     if(keyCode === 13 && searchText){
-        //cond means: if the keycode is 13 and search is true run code
+        //condt=if the keycode is 13 and search is true run code
+        // console.log(searchText);
+
+        for(var movie of movieData){
+            // movie refers to every object and its info in the array
+            
+        }
+
 
     }
 }
 
 
 //initialising function starts when page loads
-function init(){
 // event listener first then create the func above it
 //second argument in eventListener must be a call-bk func
+function init(){
 searchInput.addEventListener('keydown', getMovieData )
 }
 
 init();
+//init NEEDS to be called like this ^ otherwise the codes above will not run
 
 // Get html elements
 // Get the input's value on enter key press
