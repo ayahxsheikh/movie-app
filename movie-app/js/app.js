@@ -17,7 +17,9 @@ function getMovieData(event){
 
         for(var movie of movieData){
             // movie refers to every object and its info in the array
-            
+            if(movie.title === searchText){
+                console.log('match')
+            }
         }
 
 
