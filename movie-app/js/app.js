@@ -17,7 +17,8 @@ function getMovieData(event){
 
         for(var movie of movieData){
             // movie refers to every object and its info in the array
-            if(movie.title.toLocaleLowerCase() === searchText){
+            if(movie.title.toLocaleLowerCase().includes(searchText)){
+                //.lowercase allows removes case sensitivity .includes allows partial search "die" instead of die hard
                 console.log('match')
             }
         }
