@@ -41,6 +41,15 @@ function getMovieData(event){
         //fetch visits the data of the site url entered returns promiseObj
         var responsePromise = fetch('https://www.omdbapi.com/?apikey=84f848a9&t=drive');
 
+        function handleResponse (responseObj) {
+            return responseObj.json():
+                //json method gives another promise object (w/then &cat)
+        }
+        
+        
+
+        })
+
         displayMatches(matches);
 
 
