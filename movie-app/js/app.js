@@ -48,10 +48,8 @@ function getMovieData(event){
         responsePromise
             .then(handleResponse)
             .then(function (data) {
-            console.log(data);
+                displayMatches(data.Search);
         });
-
-        displayMatches(matches);
 
 
     }
