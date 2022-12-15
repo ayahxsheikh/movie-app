@@ -39,7 +39,7 @@ function getMovieData(event){
             }
         }
         
-        var responsePromise = fetch(`https://www.omdbapi.com/?apikey=84f848a9&t=${searchText}`);
+        var responsePromise = fetch(`https://www.omdbapi.com/?apikey=84f848a9&s=${searchText}`);
 
         function handleResponse (responseObj) {
             return responseObj.json()
