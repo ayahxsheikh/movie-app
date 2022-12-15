@@ -39,6 +39,7 @@ function getMovieData(event){
             }
         }
         
+       
         var responsePromise = fetch('https://www.omdbapi.com/?apikey=84f848a9&t=drive');
 
         function handleResponse (responseObj) {
@@ -47,11 +48,11 @@ function getMovieData(event){
         
         responsePromise
             .then(handleResponse)
-            .then(function (data)) {
+            .then(function (data) {
             console.log(data);
-        }
+        });
 
-        })
+    
 
         displayMatches(matches);
 
