@@ -2,9 +2,10 @@
 var searchInput = document.body.querySelector('.search');
 var itemWrapper = document.body.querySelector('main');
 
-function displayMatches(matches){
+function displayMatches(matches) {
     itemWrapper.innerHTML = '';
-    for (var matchObj of matches){
+    console.log(matches);
+    for (var matchObj of matches) {
     itemWrapper.insertAdjacentHTML('beforeend', `
     <div class="movie-item" style="background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
