@@ -38,6 +38,9 @@ function getMovieData(event){
             matches.push(movie);
             }
         }
+
+        fetch('https://www.omdbapi.com/?apikey=84f848a9&t=drive');
+
         displayMatches(matches);
 
 
