@@ -1,17 +1,15 @@
 
-var searchInput = document.body.querySelector('.search');
-var itemWrapper = document.body.querySelector('main');
+var searchInput = $('.search');
+var itemWrapper = $('main');
 
 function displayMatches(matches) {
-    itemWrapper.innerHTML = '';
+    itemWrapper.html('');
     
     if(!matches){
-    //attach a return key word here instead of using the else statement. 
-    // else statement would have for of loop inside it
-      return itemWrapper.innerHTML = '<p class="not-searched">No results found.</p>'
+      return itemWrapper.html('<p class="not-searched">No results found.</p>') 
     }
         for (var matchObj of matches) {
-            itemWrapper.insertAdjacentHTML('beforeend', `
+            itemWrapper.append( `
             <div class="movie-item" style="background: 
             linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
             url(${matchObj.Poster})">
@@ -26,29 +24,21 @@ function displayMatches(matches) {
 
 function getMovieData(event){
     var keyCode = event.keyCode;
-    var searchText = searchInput.value.trim().toLowerCase(); 
+    var searchText = searchInput.val().trim(); 
 
     if(keyCode === 13 && searchText){
-        
-        var responsePromise = fetch(`https://www.omdbapi.com/?apikey=84f848a9&s=${searchText}`);
+    //$.get() works similar to fetch
+       $.get(`https://www.omdbapi.com/?apikey=84f848a9&s=${searchText}`)
+       .then(function (data) {
+       displayMatches(data.Search);
 
-        function handleResponse (responseObj) {
-            return responseObj.json()
-        }
-        
-        responsePromise
-            .then(handleResponse)
-            .then(function (data) {
-            displayMatches(data.Search);
-        });
-
-
-    }
+    });
+}
 }
 
 
 function init(){
-searchInput.addEventListener('keydown', getMovieData )
+searchInput.keydown(getMovieData )
 }
 
 init();
