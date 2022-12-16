@@ -7,6 +7,7 @@ function displayMatches(matches) {
     
     if(!matches){
     //attach a return key word here instead of using the else statement. 
+    // else statement would have for of loop inside it
       return itemWrapper.innerHTML = '<p class="not-searched">No results found.</p>'
     }
         for (var matchObj of matches) {
