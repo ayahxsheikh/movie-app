@@ -6,10 +6,9 @@ function displayMatches(matches) {
     itemWrapper.innerHTML = '';
     
     if(!matches){
-        itemWrapper.innerHTML = '<p class="not-searched">No results found.</p>'
-    } else{
-
-        
+    //attach a return key word here instead of using the else statement. 
+      return itemWrapper.innerHTML = '<p class="not-searched">No results found.</p>'
+    }
         for (var matchObj of matches) {
             itemWrapper.insertAdjacentHTML('beforeend', `
             <div class="movie-item" style="background: 
@@ -21,7 +20,6 @@ function displayMatches(matches) {
             </div>`
             );
         }
-    }
 
 }
 
